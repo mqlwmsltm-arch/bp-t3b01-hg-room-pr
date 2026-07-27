@@ -1,192 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화곡 룸싸롱 가격 정보 | 데이터 기반 요금 체계 분석</title>
-    <meta name="description" content="화곡 룸싸롱 가격에 관한 상세 정보: 2025년 기준 업소별 요금표, 시간대별 할인 정책, VIP 패키지 구성, 예약 시스템. 강서구 유흥업계 공식 데이터 제공.">
-    <meta name="keywords" content="화곡 룸싸롱 정보, 화곡 룸싸롱 가격 체계, 화곡 룸살롱 요금표, 화곡 유흥업소 정보, 강서구 룸싸롱 데이터, 화곡 주점 정보">
-    <link rel="canonical" href="https://t3b01-hg-room-pages.dev/info">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="화곡 룸싸롱 가격 정보 | 프리미엄 룸살롱 데이터">
-    <meta property="og:description" content="2025년 최신 화곡 룸싸롱 가격 정보: 기본 요금, 시간대별 할인, VIP 패키지, 예약 시스템. 업계 공식 데이터로 분석합니다.">
-    <meta property="og:url" content="https://t3b01-hg-room-pages.dev/info">
-    <meta property="og:image" content="https://t3b01-hg-room-pages.dev/og-image-info.jpg">
-    <meta property="og:locale" content="ko_KR">
-    
-    <style>
-        /* ===== RESET & BASE ===== */
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior:smooth; font-size:16px; }
-        body { font-family:'Noto Sans KR', 'Malgun Gothic', sans-serif; background:#0a0a0a; color:#e0e0e0; line-height:1.6; }
-        
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4, h5, h6 { font-family:'Unbounded', 'Noto Sans KR', sans-serif; font-weight:700; letter-spacing:-0.02em; }
-        h1 { font-size:2.8rem; line-height:1.1; background:linear-gradient(135deg,#f0f 0%,#0ff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0.5rem; }
-        h2 { font-size:2rem; color:#f0f; border-left:4px solid #0ff; padding-left:1rem; margin:2.5rem 0 1.5rem; }
-        h3 { font-size:1.5rem; color:#0ff; margin:1.5rem 0 0.75rem; }
-        p, li { font-size:1rem; margin-bottom:0.75rem; opacity:0.92; }
-        a { color:#0ff; text-decoration:none; border-bottom:1px solid transparent; transition: all 0.3s ease; }
-        a:hover { border-bottom-color:#f0f; color:#f0f; }
-        
-        /* ===== GLOBAL LAYOUT ===== */
-        .container { max-width:1200px; margin:0 auto; padding:0 1.5rem; }
-        section { padding:4rem 0; }
-        .gap-48 { height:48px; }
-        
-        /* Header & Navigation */
-        header { position:sticky; top:0; z-index:100; background:rgba(10,10,10,0.95); backdrop-filter:blur(12px); border-bottom:1px solid #333; }
-        .nav-wrap { display:flex; justify-content:space-between; align-items:center; padding:0.8rem 0; }
-        .logo { font-size:1.8rem; font-weight:900; background:linear-gradient(45deg,#f0f,#0ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        .nav-links { display:flex; gap:2rem; list-style:none; }
-        .nav-links a { font-size:0.95rem; font-weight:500; border-bottom:none; }
-        .nav-links a:hover { color:#f0f; }
-        .hamburger { display:none; flex-direction:column; cursor:pointer; }
-        .hamburger span { display:block; width:28px; height:3px; background:#0ff; margin:4px 0; transition:0.3s; }
-        
-        /* Hero / Info Hero */
-        .hero-info { background:linear-gradient(135deg,#0a0a0a 40%,#1a0033); padding:5rem 0 4rem; text-align:center; border-bottom:2px solid #f0f; }
-        .hero-info .sub { font-size:1.2rem; color:#aaa; margin-top:1rem; display:inline-block; background:rgba(255,255,255,0.05); padding:0.5rem 1.5rem; border-radius:4px; border-left:3px solid #0ff; }
-        
-        /* Cards */
-        .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; margin:2.5rem 0; }
-        .card { background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:1.8rem; transition:0.3s; }
-        .card:hover { border-color:#f0f; box-shadow:0 0 30px rgba(255,0,255,0.1); }
-        .card h3 { margin-top:0; }
-        .card .price-tag { font-size:2rem; font-weight:800; color:#f0f; }
-        .card .price-note { font-size:0.85rem; color:#888; }
-        
-        /* Data Table */
-        .data-table { width:100%; border-collapse:collapse; margin:2rem 0; }
-        .data-table th { background:#1a1a1a; color:#f0f; padding:1rem; text-align:left; border-bottom:2px solid #f0f; font-weight:600; }
-        .data-table td { padding:1rem; border-bottom:1px solid #333; }
-        .data-table tr:hover td { background:rgba(255,0,255,0.05); }
-        
-        /* FAQ */
-        .faq-list { display:flex; flex-direction:column; gap:1rem; }
-        .faq-item { background:#1a1a1a; border:1px solid #333; border-radius:8px; padding:1.2rem 1.5rem; }
-        .faq-item h4 { color:#0ff; font-size:1.1rem; margin-bottom:0.5rem; }
-        .faq-item p { margin:0; }
-        
-        /* Tel Link */
-        .tel-link { display:inline-block; background:linear-gradient(135deg,#f0f,#0ff); color:#0a0a0a; font-weight:700; padding:0.8rem 2rem; border-radius:8px; border:none; text-decoration:none; transition:0.3s; }
-        .tel-link:hover { transform:scale(1.05); box-shadow:0 0 30px rgba(0,255,255,0.3); }
-        
-        /* Footer */
-        footer { border-top:1px solid #333; padding:3rem 0; text-align:center; color:#666; font-size:0.9rem; }
-        
-        /* Responsive (768px) */
-        @media (max-width:768px) {
-            .hamburger { display:flex; }
-            .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:#0a0a0a; flex-direction:column; gap:0; border-bottom:1px solid #333; }
-            .nav-links.active { display:flex; }
-            .nav-links a { display:block; padding:1rem 1.5rem; border-bottom:1px solid #222; }
-            h1 { font-size:2rem; }
-            h2 { font-size:1.5rem; }
-            .card-grid { grid-template-columns:1fr; }
-            .data-table { font-size:0.85rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="bpaas-design-system" content="editorial-apple">
+<meta name="bpaas-design-theme" content="kr-midnight-gold">
+<title>화곡 룸싸롱 가격: 투명한 정보와 선택 가이드</title>
+<meta name="description" content="화곡 룸싸롱 가격을 비교할 때 반드시 확인해야 할 고정 조건과 서비스 포함 범위, 그리고 합리적인 선택을 위해 고려해야 할 질문 리스트를 전문가적 시각에서 정리하였습니다.">
+<meta name="keywords" content="화곡 룸싸롱 가격, 화곡 유흥 비교, 룸싸롱 선택 가이드, 화곡 접대 기준">
+<link rel="canonical" href="https://hwagok-room-tip.hardcoreroom.com/about.html">
+<style>
+:root { --gold: #c5a059; --midnight: #0a0a0c; --text: #e0e0e0; }
+body { background: var(--midnight); color: var(--text); font-family: 'Pretendard', sans-serif; line-height: 1.8; }
+.k-img-p4by { border-bottom: 1px solid var(--gold); padding: 2rem; text-align: center; }
+.x-nav-tkmf { display: flex; justify-content: center; gap: 20px; padding: 1rem; }
+.r-top-hluk { max-width: 800px; margin: 0 auto; padding: 2rem; }
+h1 { color: var(--gold); font-size: 2.2rem; margin-bottom: 1.5rem; }
+h2 { color: var(--gold); border-left: 3px solid var(--gold); padding-left: 1rem; margin-top: 3rem; }
+.t-btn-i7aj { display: block; width: 200px; margin: 2rem auto; padding: 1rem; background: var(--gold); color: var(--midnight); text-align: center; text-decoration: none; font-weight: bold; }
+.k-txt-2eud { margin-bottom: 1.5rem; }
+@media (max-width: 768px) { .r-top-hluk { padding: 1rem; } }
+</style>
+  <meta property="og:url" content="https://hwagok-room-tip.hardcoreroom.com/about.html">
 </head>
 <body>
-
-<!-- ===== HEADER ===== -->
-<header>
-    <div class="container nav-wrap">
-        <div class="logo">✦ HG LOUNGE</div>
-        <nav>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/">홈</a></li>
-                <li><a href="/info">정보</a></li>
-                <li><a href="/pricing">가격</a></li>
-                <li><a href="/vip">VIP</a></li>
-                <li><a href="/reservation">예약</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-                <span></span><span></span><span></span>
-            </div>
-        </nav>
-    </div>
+<header class="k-img-p4by">
+    <strong>Black Book Concierge: 화곡 지역 정보 가이드</strong>
 </header>
+<nav class="x-nav-tkmf">
+    <a href="/">홈</a>
+    <a href="/info">정보</a>
+    <a href="/guide">기준</a>
+</nav>
 
-<!-- ===== HERO INFO ===== -->
-<section class="hero-info">
-    <div class="container">
-        <h1>화곡 룸싸롱 가격 정보</h1>
-        <p class="sub">강서구 유흥업계 공식 데이터 — 2025년 최신 요금 체계 및 서비스 기준</p>
-        <div style="margin-top:2rem;">
-            <a href="tel:050712345678" class="tel-link">전문 상담 연결</a>
-        </div>
-    </div>
-</section>
+<main class="r-top-hluk">
+    <h1>화곡 룸싸롱 가격 구성의 이해</h1>
+    
+    <section>
+        <h2>비용 구조의 표준화된 정의</h2>
+        <p class="k-txt-2eud">
+            화곡 지역의 유흥 시설을 이용할 때 가장 먼저 파악해야 할 것은 가격의 구성 체계입니다. 단순히 '총액'만을 비교하는 것은 매우 위험한 접근 방식입니다. 일반적으로 가격은 입장료, 주류 비용, 그리고 서비스 이용료(티씨)로 나뉘며, 각 항목이 어떻게 산정되는지에 따라 최종 지불액에 차이가 발생합니다.
+        </p>
+        <p class="k-txt-2eud">
+            전문적인 접대나 비즈니스 목적의 방문이라면, 이러한 구성 요소가 투명하게 공개되는 곳을 선택해야 합니다. '패키지'라는 명목으로 불필요한 비용이 포함되어 있지는 않은지, 혹은 특정 시간대나 인원수에 따른 할증 기준이 명확한지 사전에 확인하는 과정이 필수적입니다.
+        </p>
+    </section>
 
-<!-- ===== MAIN CONTENT ===== -->
-<main>
-    <div class="container">
+    <section>
+        <h2>인원 및 시간대별 산정 기준</h2>
+        <p class="k-txt-2eud">
+            인원수에 따른 가격 변화는 유연하게 대응해야 합니다. 소규모 방문일 경우 룸 차지와 주류 비용의 비율이 높게 책정될 수 있으며, 인원이 많아질수록 1인당 단가는 상대적으로 낮아지는 구조를 띱니다. 따라서 방문 전 인원수를 정확히 고지하고 그에 따른 최적의 견적을 요청하는 것이 경제적입니다.
+        </p>
+        <p class="k-txt-2eud">
+            또한, 방문 시간대 역시 중요한 변수입니다. 이른 저녁 시간대와 심야 시간대는 운영 전략이 다르므로, 가격 정책에서도 차이를 보입니다. 비즈니스 접대라면 조용한 환경이 보장되는 시간대를 선점하는 것이 중요하며, 이때 발생할 수 있는 추가 비용 범위를 미리 파악하는 것이 전문적인 의사결정의 핵심입니다.
+        </p>
+    </section>
 
-        <!-- SECTION: Overview -->
-        <section id="overview">
-            <h2>업소별 기본 요금 개요</h2>
-            <p>화곡동 룸싸롱 업소들은 강서구 내에서도 가장 체계적인 가격 구조를 갖추고 있습니다. 2025년 1분기 기준, 30여 개 주요 업소의 공시 요금을 취합·분석한 결과 기본 요금대는 크게 <strong>3개 등급</strong>으로 구분됩니다. 아래 표는 각 등급별 대표 가격과 포함 서비스를 정리한 것입니다.</p>
-            
-            <table class="data-table">
-                <thead>
-                    <tr><th>등급</th><th>기본 요금 (2시간)</th><th>연장 30분당</th><th>주류 기본 포함</th><th>안주 기본</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Standard</td><td>20~30만 원</td><td>4~6만 원</td><td>양주 1병</td><td>과일 + 건조안주</td></tr>
-                    <tr><td>Premium</td><td>35~50만 원</td><td>7~10만 원</td><td>양주 2병 + 맥주</td><td>코스 요리 3종</td></tr>
-                    <tr><td>VIP Suite</td><td>60~100만 원</td><td>12~20만 원</td><td>Top Shelf 양주 무제한</td><td>오마카세 7코스</td></tr>
-                </tbody>
-            </table>
-            <p class="note" style="color:#888; font-size:0.9rem;">※ 가격은 업소별 프로모션·시즌에 따라 변동될 수 있습니다. 실시간 가격은 전화 문의를 권장합니다.</p>
-        </section>
+    <section>
+        <h2>품질과 서비스의 상관관계</h2>
+        <p class="k-txt-2eud">
+            저렴한 가격만을 우선시할 경우, 기대했던 서비스 품질을 충족하지 못할 위험이 있습니다. 룸싸롱 선택 시 가격은 '서비스의 범위'를 결정하는 지표입니다. 주류의 정품 여부, 접객 인원의 숙련도, 그리고 시설의 청결도와 보안 수준은 모두 가격 정책에 반영되어 있습니다.
+        </p>
+        <p class="k-txt-2eud">
+            따라서 가격을 비교할 때는 반드시 '동일 조건'을 가정해야 합니다. 무조건적인 저가 정책을 홍보하는 곳보다는, 서비스의 질을 유지하면서 합리적인 가격대를 제시하는 곳이 장기적으로는 더 높은 만족도를 제공합니다. 귀하의 목적에 가장 부합하는 선택을 위해, 가격 뒤에 숨겨진 가치를 분석하십시오.
+        </p>
+    </section>
 
-        <!-- SECTION: Time-based Pricing -->
-        <section id="time-pricing">
-            <h2>시간대별 요금 차등 정책</h2>
-            <p>화곡 룸싸롱 업계에서는 피크 타임과 오프 타임에 따라 요금 차등을 적용하는 업소가 65%에 달합니다. 데이터에 기반한 시간대별 할인율은 다음과 같습니다.</p>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>🌅 낮 타임 (12:00~18:00)</h3>
-                    <p class="price-tag">30% 할인</p>
-                    <p class="price-note">기본 요금 대비 평균 30% 저렴. 조용한 분위기 선호 고객에게 적합.</p>
-                </div>
-                <div class="card">
-                    <h3>🌆 골든 타임 (18:00~21:00)</h3>
-                    <p class="price-tag">기준 요금</p>
-                    <p class="price-note">표준 요금 적용. 저녁 식사와 함께 이용하는 고객 비중 53%.</p>
-                </div>
-                <div class="card">
-                    <h3>🌙 프라임 타임 (21:00~02:00)</h3>
-                    <p class="price-tag">20% 프리미엄</p>
-                    <p class="price-note">가장 높은 수요 시간. 전체 매출의 60% 이상이 이 시간대 발생.</p>
-                </div>
-            </div>
-        </section>
+    <a href="#" class="t-btn-i7aj">전문 상담 문의</a>
 
-        <!-- SECTION: VIP Package -->
-        <section id="vip-package">
-            <h2>VIP 패키지 상세 데이터</h2>
-            <p>상위 15% 고객을 위한 VIP 패키지는 화곡 룸싸롱의 핵심 서비스입니다. 2024년 하반기 데이터 기준, VIP 패키지 이용 고객의 재방문률은 82%에 달합니다.</p>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>💎 Silver VIP</h3>
-                    <p class="price-tag">80만 원</p>
-                    <p>· 3시간 기본 이용<br>· 프리미엄 양주 3병<br>· 전용 룸 (20평형)<br>· 전담 매니저 1:1</p>
-                </div>
-                <div class="card">
-                    <h3>💎 Gold VIP</h3>
-                    <p class="price-tag">150만 원</p>
-                    <p>· 4시간 기본 이용<br>· Top Shelf 무제한<br>· 전용 룸 (30평형)<br>· 시가 라운지 + 발레파킹</p>
-                </div>
-                <div class="card">
-                    <h3>💎 Platinum VIP</h3>
-                    <p class="price-tag">300만 원</p>
-                    <p>· 5시간 기본 이용<br>· 한정판 위스키 포함<br>· 최상위 룸 (50평형)<br>· 전속 드라이버 + 24시간 케어</p>
-                </div
+    <section>
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <p class="k-txt-2eud">
+            <strong>Q: 화곡 지역의 가격은 타 지역과 비교해 어떤 차이가 있나요?</strong><br>
+            A: 지역적 특성에 따라 임대료와 운영 방식이 다르기 때문에 가격대도 상이합니다. 화곡은 효율성을 중시하는 비즈니스 고객이 많아 실속 있는 구성이 발달해 있습니다.
+        </p>
+        <p class="k-txt-2eud">
+            <strong>Q: 추가 비용을 방지하기 위한 팁은 무엇인가요?</strong><br>
+            A: 예약 단계에서 모든 구성 품목을 문서화하거나 구두로 명확히 확인하십시오. 특히 '포함 사항'과 '별도 비용'의 경계를 분명히 하는 것만으로도 예기치 못한 지출을 방지할 수 있습니다.
+        </p>
+    </section>
+</main>
 </body>
 </html>
